@@ -1,0 +1,23 @@
+{
+  "name": "craft-night-github-actions",
+  "version": "1.0.0",
+  "description": "In this workshop we want to setup a repository with an arbitrary project and perform some tasks on it using github actions. You can use github actions to build your software, to deploy an application or many other things. The trigger for these actions can be different events like a `git push` or a created pull request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svenallers/craft-night-github-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svenallers/craft-night-github-actions/issues"
+  },
+  "homepage": "https://github.com/svenallers/craft-night-github-actions#readme",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "npx": "^10.2.2"
+  }
+}

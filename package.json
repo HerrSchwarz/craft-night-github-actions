@@ -1,0 +1,23 @@
+{
+  "name": "craft-night-github-actions",
+  "version": "1.0.0",
+  "description": "example for github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HerrSchwarz/craft-night-github-actions.git"
+  },
+  "author": "Felix Eckhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HerrSchwarz/craft-night-github-actions/issues"
+  },
+  "homepage": "https://github.com/HerrSchwarz/craft-night-github-actions#readme",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "npx": "^10.2.2"
+  }
+}

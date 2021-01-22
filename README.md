@@ -102,3 +102,19 @@ This environment variable will be available in the step (not the job!) you defin
 
 ### Task
 Setup a secret and use this secret in a jest test. To access an environment variable in javascript use `process.env.<VARIABLE_NAME>`
+
+## Build matrix
+When building a product that might be used in different environments by the customer (e.g. on different JVM or Node Version) we would like to make sure, that the product we build works in for all versions, we promised the customer.
+
+In order to execute a build for different versions of node add the following to the file:
+
+```
+...
+    runs_on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [8, 10, 12]
+...
+``` 
+
+Add this to the `build.yml`, commit and push this and create a PR. Take a look at your checks. There should be three builds running, for node 8, 10 and 12. 

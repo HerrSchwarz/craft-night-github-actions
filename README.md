@@ -231,7 +231,7 @@ When application are built, we usually need quite some dependencies and we need 
 Cache the dependencies!
 
 ## Documentation
-The documentation available for Github Actions and Github in general is great. Take a look: https://rocketchat.silpion.de/channel/craft-night.
+The documentation available for Github Actions and Github in general is great. Take a look: https://docs.github.com/en/actions.
 
 ## Conclusion
 Building, testing or deploying your app with Github Actions is fairly easy. The simplicity and the quality of the documentation enabled us to work with Actions without the need of hours of research. We just did it. Thats the way it should go. If course there are a few caveats. There is a free plan for Open Source projects, but you have to apply for them. 

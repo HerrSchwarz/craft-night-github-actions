@@ -1,4 +1,4 @@
-![CI](https://github.com/HerrSchwarz/craft-night-github-actions/workflows/CI/badge.svg)
+![Silpion Craft-Night example](https://github.com/HerrSchwarz/craft-night-github-actions/workflows/Silpion%20Craft-Night%20example/badge.svg)
 # craft-night-github-actions
 
 In this workshop we want to setup a repository with an arbitrary project and perform some tasks on it using github actions. You can use github actions to build your software, to deploy an application or many other things. The trigger for these actions can be different events like a `git push` or a created pull request.

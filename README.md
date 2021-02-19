@@ -95,7 +95,7 @@ ${{ test }}
 But what, if you want to use it in a build script? You can set it as an environment variable:
 
 ```
- - name: Steup name
+ - name: Step name
         env:
           super_secret: ${{ secrets.SUPERSECRET }}
 ```          

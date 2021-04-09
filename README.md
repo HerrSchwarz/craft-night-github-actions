@@ -2,12 +2,10 @@
 ![Node.js CI](https://github.com/HerrSchwarz/craft-night-github-actions/workflows/Node.js%20CI/badge.svg)
 # craft-night-github-actions
 
-In this workshop we want to setup a repository with an arbitrary project and perform some tasks on it using github actions. You can use github actions to build your software, to deploy an application or many other things. The trigger for these actions can be different events like a `git push` or a created pull request.
+In this tutorial we want to setup a repository with an arbitrary project and perform some tasks on it using github actions. You can use github actions to build and test your software, to deploy an application or many other things. The trigger for these actions can be different events like a `git push` or a created pull request.
 
 ## Preperation and requirements
-You will only need a github account and an editor. If you have a project hosted at github you can also use this. You do not need a paid account. Github actions is included in the free account and you can use up to 2000 action minutes per Month for free.
-
-Please make sure you have a repository you can use or fork this one.
+You will only need a github account, an editor and a git client. If you have a project hosted at github you can also use this. You do not need a paid account. Github actions is included in the free account and you can use up to 2000 action minutes per Month for free.
 
 ## Creating a simple action
 We will first create an action workflow without using a template. Please create a branch `github-actions` and enable an action workflow by placing a file in the  directory `.github/workflows/`. You can choose whatever name you want, but it has to be a `.yml` file. Example: `.github/workflows/build.yml`.
@@ -175,7 +173,27 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: deploy
+        run: deploy.sh
 ```
+
+You need to add the deploy.sh script. You can use this as an example:
+
+```
+#!/bin/sh
+echo "starting deployment..."
+sleep 5
+echo "destroying production system..."
+sleep 4
+echo "sending out emails to customers..."
+sleep 3
+echo "going to file under chapter 11..."
+sleep 2
+echo "done. you may now go to bed."
+sleep 1
+```
+
+This won't deploy anything, but should be sufficient to test the action setup.
+
 ### Task
 Use the config above:
 
@@ -198,7 +216,7 @@ When your build is finished you might want to offer some artifacts for a downloa
 ```
 
 ### Task
-Add the code snippet to a new PR and find the deploy.sh artifact. Then update the action to upload more than one file.
+Add the code snippet to a new PR and find the deploy.sh artifact on the github website. Then update the action to upload more than one file.
 
 ## Docker
 Docker is available without any additional effort.
@@ -230,7 +248,11 @@ When application are built, we usually need quite some dependencies and we need 
 ```
 
 ### Task
-Cache the dependencies!
+Cache the dependencies:
+
+- Add the config mentioned above
+- Check your build
+- Find out, how much time was saved by caching your dependencies
 
 ## Documentation
 The documentation available for Github Actions and Github in general is great. Take a look: https://docs.github.com/en/actions.
